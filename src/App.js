@@ -94,6 +94,21 @@ export default function App(){
         arrayTemp[cartaSelecionada].color = "#2FBE34"
         setDeckDeTeste(...[arrayTemp])
         if (nAcertadas<deckDeTeste.length)setNAcertadas(nAcertadas+1);    }
+    function iconChoose(color){
+        
+        if (color == "#333333"){
+            return "play-outline"
+        }
+        else if (color == "#FF3030"){
+            return "close-circle"
+        }
+        else if (color == "#FF922E"){
+            return "help-circle"
+        }
+        else if (color == "#2FBE34"){
+            return "checkmark-circle"
+        }
+    }
     return(
         <>
         <GlobalStyle/>
@@ -103,7 +118,7 @@ export default function App(){
                 <h1>ZapRecall</h1>    
             </div>
             {deckDeTeste.map((item,index) => <CaixaPergunta currentStatus={item.status} currentColor={item.color} onClick={()=>{changeStatus(item,index); setCartaSelecionada(index)}}  key={index}>
-                {checkStatus(item,index)}
+                <p>{checkStatus(item,index)}</p> <ion-icon name={()=>{iconChoose(item.color); console.log(iconChoose(item.color))}}></ion-icon>
                 </CaixaPergunta> )}
                 <div className="footer-concluidos">
                     <div className="container-botoes">
