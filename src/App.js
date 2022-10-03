@@ -122,12 +122,12 @@ export default function App(){
                 </CaixaPergunta> )}
                 <div className="footer-concluidos">
                     <div className="container-botoes">
-                        <button onClick={()=>paintRed()}>Não lembrei</button>
-                        <button onClick={()=>paintOrange()}>Quase não lembrei</button>
-                        <button onClick={()=>paintGreen()}>Zap!</button>
+                        <button onClick={()=>paintRed()  } data-identifier="forgot-btn">Não lembrei</button>
+                        <button onClick={()=>paintOrange()} data-identifier="almost-forgot-btn">Quase não lembrei</button>
+                        <button onClick={()=>paintGreen()} data-identifier="zap-btn">Zap!</button>
                         
                     </div>
-                    <div>{nAcertadas + "/" + deckDeTeste.length + " CONCLUIDOS"}</div>
+                    <div data-identifier="flashcard-counter">{nAcertadas + "/" + deckDeTeste.length + " CONCLUIDOS"}</div>
                 </div>
         </div>
         </>
