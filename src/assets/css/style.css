@@ -65,7 +65,7 @@
 .container-botoes > button {
   width: 90px;
   font-family: 'Recursive';
-  font-style: normal;
+  font-style:normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -78,6 +78,16 @@
   border-radius: 5px;
   border: 1px solid blue;
   padding:5px;
+}
+
+.container-botoes :nth-child(1){
+  background-color:#FF3030 ;
+}
+.container-botoes :nth-child(2){
+  background-color:#FF922E ;
+}
+.container-botoes :nth-child(3){
+  background-color:#2FBE34 ;
 }
 
 .pergunta-fechada {
