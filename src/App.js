@@ -117,7 +117,7 @@ export default function App(){
                 <img src={logo}></img>
                 <h1>ZapRecall</h1>    
             </div>
-            {deckDeTeste.map((item,index) => <CaixaPergunta currentStatus={item.status} currentColor={item.color} onClick={()=>{changeStatus(item,index); setCartaSelecionada(index)}}  key={index}>
+            {deckDeTeste.map((item,index) => <CaixaPergunta data-identifier="flashcard" currentStatus={item.status} currentColor={item.color} onClick={()=>{changeStatus(item,index); setCartaSelecionada(index)}}  key={index}>
                 <p>{checkStatus(item,index)}</p> <ion-icon name={()=>{iconChoose(item.color); console.log(iconChoose(item.color))}}></ion-icon>
                 </CaixaPergunta> )}
                 <div className="footer-concluidos">
